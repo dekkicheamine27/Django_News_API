@@ -45,7 +45,7 @@ Ensure PostgreSQL is installed and running on your system. Create a new database
 pip install psycopg2
 ```
 
-4. Modify settings.py
+4. **Modify settings.py**
 Open news_dashboard/settings.py and find the DATABASES setting. Replace the default configuration with your PostgreSQL database configuration:
 ```
 DATABASES = {
@@ -59,12 +59,12 @@ DATABASES = {
     }
 }
 ```
-3. Apply Migrations
+3. **Apply Migrations**
 ```
-python manage.py mikemigrations
 python manage.py migrate
 ```
-4. Run the Server
+
+5. **Run the Server**
 ```
 python manage.py runserver
 ```
@@ -73,6 +73,15 @@ After starting the server, the API will be available at:
 ```
 http://localhost:8000/
 ```
+
+## periodically fetch articles and store them
+this task will fetch and store articles every 1 hour, run:
+```
+python3 manage.py periodic_fetch_news
+```
+
+
+
 ### Setting up the PostgreSQL Database
 
 Before running the server, ensure you have PostgreSQL installed and running. Create a database for the project and update the `DATABASES` configuration in `settings.py` with your database credentials.
