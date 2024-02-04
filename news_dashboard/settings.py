@@ -37,9 +37,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # allows resources to be accessed on other domains
     'corsheaders',
+    
+
     'rest_framework',
     'django_filters',
+
+    
     'news_proxy'
 ]
 
