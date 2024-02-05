@@ -74,7 +74,7 @@ After starting the server, the API will be available at:
 http://localhost:8000/
 ```
 
-### periodically fetch articles and store them
+### Periodically fetch articles and store them
 1. Open news_dashboard/settings.py and find NEWSAPI_KEY . Replace the default value by your newsapi.org API KEY:
 ```
 NEWSAPI_KEY = '<your news api key>'
