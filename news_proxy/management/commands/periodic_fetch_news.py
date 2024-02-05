@@ -11,6 +11,6 @@ class Command(BaseCommand):
         
         while True:
             self.stdout.write(self.style.SUCCESS('Starting to fetch news...'))
-            fetch_news()  # Call your task function
+            fetch_news()  
             self.stdout.write(self.style.SUCCESS('Successfully updated news articles, sleep for 1 hour...'))
             time.sleep(3600)  # Sleep for 1 hour; adjust as needed

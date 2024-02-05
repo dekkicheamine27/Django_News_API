@@ -88,9 +88,9 @@ WSGI_APPLICATION = 'news_dashboard.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'news_api',
-        'USER': 'news_api',
-        'PASSWORD': 'dekkiche2793',
+        'NAME': 'your_database_name',
+        'USER': 'your_database_user',
+        'PASSWORD': 'your_database_password',
         
     }
 }
@@ -137,13 +137,18 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-NEWSAPI_KEY = '8dc13288475f4acfb19c213c2a368410'
+# source of news configuration
+BASE_URL = 'https://newsapi.org/v2/top-headlines'
+NEWSAPI_KEY = '<your news api key>' #API KEY of newsapi.org website
 
+
+#Pagination
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 50
+    'PAGE_SIZE': 50 # number of item in the page
 }
 
+#cache configurations
 CACHES = {
     "default": {
         "BACKEND": "django.core.cache.backends.locmem.LocMemCache",

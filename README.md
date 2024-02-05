@@ -4,7 +4,7 @@
 A Django-based backend that serves news articles, featuring a RESTful API for CRUD operations,  and advanced search functionalities.
 
 ## Features
-- **RESTful API**: Offers endpoints for fetching, creating, updating, and deleting news articles.
+- **RESTful API**: Offers endpoints for fetching news articles.
 - **Search**: Allows searching for articles by keywords.
 - **Filtering**: Supports filtering articles by source, category, etc.
 
@@ -74,8 +74,13 @@ After starting the server, the API will be available at:
 http://localhost:8000/
 ```
 
-## periodically fetch articles and store them
-this task will fetch and store articles every 1 hour, run:
+### Periodically fetch articles and store them
+1. Open news_dashboard/settings.py and find NEWSAPI_KEY . Replace the default value by your newsapi.org API KEY:
+```
+NEWSAPI_KEY = '<your news api key>'
+```
+   
+2.run this task to fetch and store articles every 1 hour:
 ```
 python3 manage.py periodic_fetch_news
 ```

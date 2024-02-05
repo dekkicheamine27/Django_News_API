@@ -10,9 +10,10 @@ from news_dashboard import settings
 def fetch_news():
     
     category_list = ["business", "entertainment", "general", "health", "science", "sports", "technology"]
-    # Your NewsAPI key and base URL
+    
+    
     api_key = settings.NEWSAPI_KEY
-    base_url = 'https://newsapi.org/v2/top-headlines'
+    base_url = settings.BASE_URL
     
 
     params = {
@@ -20,6 +21,8 @@ def fetch_news():
         'apiKey': api_key,
     }
 
+
+    # fetch new for ech category and store them
     for category in category_list:
         params['category'] = category
         response = requests.get(base_url, params=params)
@@ -41,4 +44,5 @@ def fetch_news():
                             'category': category
                         },
                     )
-            
+        else:
+            print("fetching data is faild")   
