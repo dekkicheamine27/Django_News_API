@@ -4,7 +4,7 @@
 A Django-based backend that serves news articles, featuring a RESTful API for CRUD operations,  and advanced search functionalities.
 
 ## Features
-- **RESTful API**: Offers endpoints for fetching, creating, updating, and deleting news articles.
+- **RESTful API**: Offers endpoints for fetching news articles.
 - **Search**: Allows searching for articles by keywords.
 - **Filtering**: Supports filtering articles by source, category, etc.
 
